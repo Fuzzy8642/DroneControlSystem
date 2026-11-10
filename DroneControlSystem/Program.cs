@@ -21,4 +21,6 @@ while (command != 0)
     Console.Write("Введите команду (1 — взлёт, 0 — выход): ");
     command = int.Parse(Console.ReadLine());
 }
+
+Drone myScndDrone = new Drone("drone");
 Console.WriteLine("Программа завершена.");
