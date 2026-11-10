@@ -64,4 +64,6 @@ if (myDrone.BatteryLevel<50)
         }
     }
 }
+
+Drone myScndDrone = new Drone("drone");
 Console.WriteLine("Программа завершена.");

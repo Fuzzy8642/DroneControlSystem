@@ -14,7 +14,10 @@ public class Drone
         BatteryLevel = batteryLevel;
         Altitude = 0;
         IsEngineOn = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/constructor-improvement
     }
     // Метод для вывода информации о дроне
     public void PrintInfo()
@@ -38,6 +41,7 @@ public class Drone
         Console.WriteLine($"{Model} взлетел на высоту 10 м. Заряд: {BatteryLevel}%");
     }
 
+<<<<<<< HEAD
         public void ChargeBattery(int amount)
     {
         BatteryLevel += amount;
@@ -68,4 +72,9 @@ public class Drone
         BatteryLevel -= 5;
         Console.WriteLine($"{Model} взлетел на высоту 10 м. Заряд: {BatteryLevel}%");
     }
+=======
+    public Drone(string model) : this(model, 100)
+    {
+    }   
+>>>>>>> feature/constructor-improvement
 }
