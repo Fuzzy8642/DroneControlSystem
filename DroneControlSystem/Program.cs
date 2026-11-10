@@ -22,7 +22,29 @@ while (command != 0)
     command = int.Parse(Console.ReadLine());
 
 
+    if (myDrone.BatteryLevel < 50)
+    {
+        bool temp = true;
+        while (temp == true)
+        {
+            Console.WriteLine("Заряд ниже половинуЮ зарядить? 1 - yes 2 - no");
+            int input = Convert.ToInt32(Console.ReadLine());
 
+            if (input == 1)
+            {
+                myDrone.ChargeBattery(myDrone.BatteryLevel);
+                temp = false;
+            }
+            else if (input == 2)
+            {
+                temp = false;
+            }
+            else if (input != 1 && input != 2)
+            {
+                Console.WriteLine("Incorrect? try again");
+            }
+        }
+    }
 }
 
 
@@ -43,27 +65,6 @@ foreach (Drone d in drones)
     }
 }
 
-if (myDrone.BatteryLevel<50)
-{
-    bool temp = true;
-    while (temp == true)
-    {
-        Console.WriteLine("Заряд ниже половинуЮ зарядить? 1 - yes 2 - no");
-        int input = Convert.ToInt32(Console.ReadLine());
-
-        if (input == 1)
-        {
-            myDrone.ChargeBattery(myDrone.BatteryLevel);
-            temp= false;
-        } else if (input==2)
-        {
-            temp = false;
-        } else if (input!=1 && input!=2)
-        {
-            Console.WriteLine("Incorrect? try again");
-        }
-    }
-}
 
 Drone myScndDrone = new Drone("drone");
 Console.WriteLine("Программа завершена.");
