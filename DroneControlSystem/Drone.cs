@@ -14,6 +14,38 @@ public class Drone
         BatteryLevel = batteryLevel;
         Altitude = 0;
         IsEngineOn = false;
+
+    }
+    // Метод для вывода информации о дроне
+    public void PrintInfo()
+    {
+        Console.WriteLine($"Модель: {Model}");
+        Console.WriteLine($"Заряд батареи: {BatteryLevel}%");
+        Console.WriteLine($"Высота: {Altitude:F1} м");
+        Console.WriteLine($"Двигатель: {(IsEngineOn ? "включён" : "выключен")}");
+    }
+    // Метод для взлёта (простая логика с условием)
+    public void TakeOff()
+    {
+        if (BatteryLevel < 20)
+        {
+            Console.WriteLine("Недостаточно заряда для взлёта (нужно минимум 20%).");
+            return;
+        }
+        IsEngineOn = true;
+        Altitude = 10.0;
+        BatteryLevel -= 5;
+        Console.WriteLine($"{Model} взлетел на высоту 10 м. Заряд: {BatteryLevel}%");
+    }
+
+        public void ChargeBattery(int amount)
+    {
+        BatteryLevel += amount;
+        if (BatteryLevel > 100)
+        {
+            BatteryLevel = 100;
+        }
+        Console.WriteLine($"Заряд после подзарядки: {BatteryLevel}%");
     }
     // Метод для вывода информации о дроне
     public void PrintInfo()
