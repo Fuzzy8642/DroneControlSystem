@@ -20,5 +20,26 @@ while (command != 0)
     }
     Console.Write("Введите команду (1 — взлёт, 0 — выход): ");
     command = int.Parse(Console.ReadLine());
+
+
+
+}
+
+
+Drone[] drones = new Drone[]
+{
+new Drone("DJI Mini 3", 85),
+new Drone("Autel EVO Lite", 45),
+new Drone("Parrot Anafi", 15)
+};
+
+foreach (Drone d in drones)
+{
+    Console.WriteLine($"Model: {d.Model}");
+    Console.WriteLine($"Battery: {d.BatteryLevel}");
+    if (d.BatteryLevel < 20)
+    {
+        Console.WriteLine("Warning. Low battery lvl");
+    }
 }
 Console.WriteLine("Программа завершена.");
