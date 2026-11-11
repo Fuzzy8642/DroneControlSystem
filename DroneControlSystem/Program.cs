@@ -1,5 +1,6 @@
 ﻿using DroneControlSystem;
-Console.WriteLine("=== Система управления БПЛА (версия 1.0) ===\n");
+using System.Globalization;
+Console.WriteLine("=== Система управления БПЛА (версия 2.0) ===");
 // Создание объекта дрона с помощью конструктора
 Drone myDrone = new Drone("DJI Mini 3", 85);
 // Вывод информации
