@@ -6,11 +6,24 @@ Drone myDrone = new Drone("DJI Mini 3", 85);
 myDrone.PrintInfo();
 Console.WriteLine();
 // Демонстрация работы условия и цикла
-Console.Write("Введите команду (1 — взлёт, 0 — выход): ");
-int command = int.Parse(Console.ReadLine());
-while (command != 0)
+bool tempr = true;
+string input="";
+while (tempr == true)
 {
-    if (command == 1)
+    Console.WriteLine("Введите число");
+    Console.Write("Введите команду (1 — взлёт, 2 — расчёт времени, 0 — выход): ");
+    input = Console.ReadLine();
+
+    if (!int.TryParse(input, out int command))
+    {
+        tempr = false;
+    }
+    else Console.WriteLine("Введите число");
+}
+
+while (Convert.ToInt32(input)!= 0)
+{
+    if (Convert.ToInt32(input) == 1)
     {
         myDrone.TakeOff();
     }
@@ -19,7 +32,7 @@ while (command != 0)
         Console.WriteLine("Неизвестная команда.");
     }
     Console.Write("Введите команду (1 — взлёт, 0 — выход): ");
-    command = int.Parse(Console.ReadLine());
+    int command = int.Parse(Console.ReadLine());
 
 
     if (myDrone.BatteryLevel < 50)
@@ -28,18 +41,18 @@ while (command != 0)
         while (temp == true)
         {
             Console.WriteLine("Заряд ниже половинуЮ зарядить? 1 - yes 2 - no");
-            int input = Convert.ToInt32(Console.ReadLine());
+            int inpu = Convert.ToInt32(Console.ReadLine());
 
-            if (input == 1)
+            if (inpu == 1)
             {
                 myDrone.ChargeBattery(myDrone.BatteryLevel);
                 temp = false;
             }
-            else if (input == 2)
+            else if (inpu == 2)
             {
                 temp = false;
             }
-            else if (input != 1 && input != 2)
+            else if (inpu != 1 && inpu != 2)
             {
                 Console.WriteLine("Incorrect? try again");
             }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DroneControlSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d466c0eb27c42347160d0104bb7c0540c5a32113")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e2eb285cff99e5c91a847c7d59cf2c41f5bd65f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DroneControlSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DroneControlSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
