@@ -59,6 +59,7 @@ foreach (Drone d in drones)
 {
     Console.WriteLine($"Model: {d.Model}");
     Console.WriteLine($"Battery: {d.BatteryLevel}");
+    d.CalculateFlightTime();
     if (d.BatteryLevel < 20)
     {
         Console.WriteLine("Warning. Low battery lvl");
