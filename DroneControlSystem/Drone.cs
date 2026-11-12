@@ -16,7 +16,7 @@ public class Drone
         IsEngineOn = false;
 
     }
-    // Метод для вывода информации о дроне
+    // Метод для вывода информации о дрон
     public void PrintInfo()
     {
         Console.WriteLine($"Модель: {Model}");
